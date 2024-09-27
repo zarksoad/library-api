@@ -25,7 +25,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/api-library.git
+   git clone https://github.com/zarksoad/library-api.git
    cd api-library
 Install the dependencies:
 
@@ -120,16 +120,3 @@ INSERT INTO books (title, author, genre, published_date) VALUES
 ('To Kill a Mockingbird', 'Harper Lee', 'Fiction', '1960-07-11');
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-markdown
-Copy code
-
-### Instructions
-- Replace `yourusername` in the Git clone URL with your actual GitHub username.
-- Adjust database connection settings in the `.env` file as needed.
-- Customize the SQL commands for your specific database management system if you're not using PostgreSQL.
-
-
-
-
-
