@@ -14,9 +14,9 @@ import { LoginService } from './services/login';
 @Module({
   imports: [
     TypeOrmModule.forFeature([User]),
-    ConfigModule.forRoot(), // Make sure to initialize ConfigModule
+    ConfigModule.forRoot(), 
     JwtModule.registerAsync({
-      imports: [ConfigModule], // Import ConfigModule here
+      imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         secret: configService.get<string>('JWT_SECRET'),

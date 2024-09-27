@@ -8,6 +8,7 @@ import { FindAllBooks } from './services/get-all/find-all-book.service';
 import { FindBookById } from './services/git-by-id/get-book-by-id.service';
 import { CheckBookService } from './services/common/check-book-exist.service';
 import { DeleteBookById } from './services/delete/delete.book.service';
+import { UpdateBookService } from './services/update/update-book.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Book])],
@@ -18,7 +19,8 @@ import { DeleteBookById } from './services/delete/delete.book.service';
     FindAllBooks,
     FindBookById,
     CheckBookService,
-    DeleteBookById
+    DeleteBookById,
+    UpdateBookService
   ],
 })
 export class BookModule {}

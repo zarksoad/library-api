@@ -10,7 +10,7 @@ export class LoginResponseDto {
 
   @ApiProperty({
     description: 'Success or error message.',
-    example: 'Login successful',
+    example: 'Login successfully',
   })
   message: string;
 }

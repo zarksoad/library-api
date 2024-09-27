@@ -10,7 +10,6 @@ import { InsertUserService } from './auth/services/insert/user-insert.service';
 import { CheckUserExistService, GenerateToken, LoginService, MatchPassword } from './auth/services/login';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './auth/entities';
-import { JwtService } from '@nestjs/jwt';
 import { BookModule } from './book/book.module';
 
 @Module({
@@ -22,6 +21,6 @@ import { BookModule } from './book/book.module';
     BookModule
 
   ],
-  providers: [JwtStrategy,AuthService, AppInitializer,RoleService,InsertUserService,LoginService,MatchPassword,CheckUserExistService,GenerateToken,JwtService],
+  providers: [ AppInitializer,RoleService,InsertUserService],
 })
 export class AppModule {}
