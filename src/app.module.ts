@@ -11,13 +11,15 @@ import { CheckUserExistService, GenerateToken, LoginService, MatchPassword } fro
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './auth/entities';
 import { JwtService } from '@nestjs/jwt';
+import { BookModule } from './book/book.module';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([User]),
     ConfigModule.forRoot({ isGlobal: true }), 
     DatabaseModule,
-    AuthModule
+    AuthModule,
+    BookModule
 
   ],
   providers: [JwtStrategy,AuthService, AppInitializer,RoleService,InsertUserService,LoginService,MatchPassword,CheckUserExistService,GenerateToken,JwtService],
