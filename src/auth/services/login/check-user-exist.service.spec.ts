@@ -1,9 +1,9 @@
+import { User } from './../../entities/user.entity';
 import { Test, TestingModule } from '@nestjs/testing';
 import { NotFoundException } from '@nestjs/common';
 import { CheckUserExistService } from './check-user-exist.service';
 import { Repository } from 'typeorm';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { User } from './../../../user/entities/user.entity';
 
 describe('CheckUserExistService', () => {
   let service: CheckUserExistService;

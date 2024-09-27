@@ -32,17 +32,14 @@ export class LoginService implements ILoginService {
       password,
       user.password,
     );
-    // If the password is incorrect, throw UnauthorizedException
     if (!checkingPassword) {
       throw new UnauthorizedException('Invalid user or password');
     }
-
     // Generate the token
     const { access_token } = await this.generateToken.token(
       user.id,
-      user.roleId,
+      user.role.id,
     );
-
     // Return the token in the expected format
     return { access_token };
   }
